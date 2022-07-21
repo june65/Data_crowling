@@ -1,17 +1,7 @@
-# 웹크롤링 프로젝트
-# https://h-glacier.tistory.com/
-
-import datetime
 import urllib.request
-import datetime
 from bs4 import BeautifulSoup
 import re
 from urllib.request import urlopen
-
-from click import option
-
-now = datetime.datetime.now()
-nowDate = now.strftime('%Y년 %m월 %d일 %H시 %M분 입니다.')
 
 for page in range(1,12):
 
