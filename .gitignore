@@ -1,2 +1,4 @@
 # ignore all files in the image/ directory
 image/
+images/
+images_check/
