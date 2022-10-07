@@ -41,14 +41,14 @@ for page in range(1):
                         for img in review_images:
                                 img_Url = img['src']
                                 with urlopen('https:'+img_Url) as f:
-                                        with open('C:/Users/82108/Desktop/이준명/Data_crowling/shopping_mall_crowling_onnoff/image/img' + "_" + str(product_name.replace(' ','')) + "_" + str(product_num) + "_" + str(number) +'.jpg','wb') as h:
+                                        with open('C:/Users/82108/Desktop/이준명/Data_crowling/shopping_mall_crowling_oddpet/image/img' + "_" + str(product_name.replace(' ','')) + "_" + str(product_num) + "_" + str(number) +'.jpg','wb') as h:
                                                 img2 = f.read()
                                                 h.write(img2)
                                                 number+=1  
                 
                 result += product_name + ',' + product_num + ',' + review_title + ',' + review_person + ',' + review_detail_date + ',' + review_detail_text + '\n'
 
-f3 = open("./result.csv", 'w', encoding='UTF8')
+f3 = open("./result.csv", 'wt', encoding='UTF8')
 f3.write(result)
 f3.close()       
         
