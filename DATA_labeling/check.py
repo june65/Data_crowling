@@ -49,7 +49,6 @@ def file_read(file):
     return user_info_list  
 
 
-
 if __name__ == '__main__':
     main()
 
