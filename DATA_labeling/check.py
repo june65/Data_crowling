@@ -18,12 +18,12 @@ def main():
         if x == 48:
             break
         if x == 49:
-            excel_write += str(dog_number) + "," 
+            excel_write += str(100 + dog_number) + "," 
             for j in range(15):
                 excel_write += str(user_data[i][j]) + ","
             excel_write += str(user_data[i][15]) + "\n"
             image = "./images/" + str(i) + ".jpg"
-            image_newname = "./images_check/" + str(dog_number) + ".jpg"
+            image_newname = "./images_check/" + str(100 + dog_number) + ".jpg"
             os.rename(image,image_newname)
             dog_number += 1
 
