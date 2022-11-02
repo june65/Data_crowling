@@ -4,7 +4,7 @@ import shutil
 # main
 def main():
 
-    data_file = open('./excel.csv', 'rt', encoding="utf-8")
+    data_file = open('./excel.csv', 'r')
     user_data = file_read(data_file)
     excel_write = ''
     dog_number = 1
@@ -19,9 +19,9 @@ def main():
             break
         if x == 49:
             excel_write += str(dog_number) + "," 
-            for j in range(11):
+            for j in range(15):
                 excel_write += str(user_data[i][j]) + ","
-            excel_write += str(user_data[i][11]) + "\n"
+            excel_write += str(user_data[i][15]) + "\n"
             image = "./images/" + str(i) + ".jpg"
             image_newname = "./images_check/" + str(dog_number) + ".jpg"
             os.rename(image,image_newname)

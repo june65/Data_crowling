@@ -4,10 +4,10 @@ import urllib.request
 # main
 def main():
 
-    data_file = open('./excel.csv', 'rt', encoding="utf-8")
+    data_file = open('./excel.csv', 'r')
     user_data = file_read(data_file)
     for i in range(len(user_data)):
-        image = user_data[i][7]
+        image = user_data[i][9]
         ssl._create_default_https_context = ssl._create_unverified_context
         urllib.request.urlretrieve(image, "./images/" + str(i) + ".jpg")
 
